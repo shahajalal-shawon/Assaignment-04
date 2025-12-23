@@ -13,7 +13,7 @@ fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=")
                   <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
                 </figure>
                 <div class="card-body">
-                  <h2 class="card-title">
+                  <h2 class="card-title font-bold">
                     ${meal.strCategory}
                   </h2>
                   <p>${meal.strInstructions.slice(0, 200)}</p>
@@ -30,3 +30,9 @@ fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=")
       </div>
     `;
   });
+
+const search_field = document.getElementById("search_item");
+
+search_field.addEventListener("submit", function (e) {
+  console.log(e);
+});
